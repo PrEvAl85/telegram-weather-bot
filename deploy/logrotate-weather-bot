@@ -1,0 +1,14 @@
+/opt/weather-bot/logs/*.log {
+    daily
+    maxsize 50M
+    rotate 7
+    compress
+    missingok
+    notifempty
+    copytruncate
+    dateext
+    dateformat -%Y%m%d
+    dateyesterday
+    su weatherbot weatherbot
+    create 0644 weatherbot weatherbot
+}
